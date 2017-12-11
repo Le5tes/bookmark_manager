@@ -1,4 +1,10 @@
 <h1> Welcome to Bookmark Manager!!!!!!! </h1>
 
 <h3> Bookmarks: </h3>
-<a href= "https://github.com"> Github </a>
+<ul id = 'links'>
+  <% @links.each do |link| %>
+  <li>
+  	<a href= <%= link.url %> > <%= link.title %> </a>
+  </li>
+  <% end %>
+</ul>

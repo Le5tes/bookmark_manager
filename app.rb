@@ -1,8 +1,10 @@
 require 'sinatra/base'
+require './models/link'
 
 class BookmarkManager <Sinatra::Base
 
 get '/' do
+	@links = Link.all
   erb :homepage
 end
 
